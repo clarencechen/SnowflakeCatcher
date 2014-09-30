@@ -27,13 +27,13 @@ void mouseDragged()
   { 
     noStroke();
     fill(255,0,0);
-    ellipse(mouseX,mouseY,16,16);
+    ellipse(mouseX,mouseY,32,32);
   }
   else if (mouseButton == RIGHT)
   {
     noStroke();
     fill(0);
-    ellipse(mouseX,mouseY,16,16);
+    ellipse(mouseX,mouseY,32,32);
   }
 }
 

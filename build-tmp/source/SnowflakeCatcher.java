@@ -43,13 +43,13 @@ public void mouseDragged()
   { 
     noStroke();
     fill(255,0,0);
-    ellipse(mouseX,mouseY,16,16);
+    ellipse(mouseX,mouseY,32,32);
   }
   else if (mouseButton == RIGHT)
   {
     noStroke();
     fill(0);
-    ellipse(mouseX,mouseY,16,16);
+    ellipse(mouseX,mouseY,32,32);
   }
 }
 
@@ -113,8 +113,8 @@ class Gas
     while(x<0)
     {x += 768;} 
     y %= 768;
-    while(x<0)
-    {x += 768;}
+    while(y<0)
+    {y += 768;}
   }
 }
 
