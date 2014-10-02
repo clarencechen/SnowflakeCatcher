@@ -69,6 +69,7 @@ class Gas
   void look()
   {
     color c = color(255,0,0);
+    color d = color(0,0,0);
     for(double ang = angle-PI;ang<=angle+PI;ang+=PI/12)
     {
       if(get(x +(int)(6*Math.cos(ang)),y +(int)(6*Math.sin(ang))) == c)
@@ -76,7 +77,7 @@ class Gas
         isMoving = false;
         break;
       }
-      else
+      else if (get(x +(int)(6*Math.cos(ang)),y +(int)(6*Math.sin(ang))) == d)
       {
         isMoving = true;
       }

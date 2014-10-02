@@ -14,7 +14,7 @@ import java.io.IOException;
 
 public class SnowflakeCatcher extends PApplet {
 
-Gas[] mol = new Gas[1024];
+Gas[] mol = new Gas[512];
 public void setup()
 {
   frameRate(16);
@@ -85,6 +85,7 @@ class Gas
   public void look()
   {
     int c = color(255,0,0);
+    int d = color(0,0,0);
     for(double ang = angle-PI;ang<=angle+PI;ang+=PI/12)
     {
       if(get(x +(int)(6*Math.cos(ang)),y +(int)(6*Math.sin(ang))) == c)
@@ -92,7 +93,7 @@ class Gas
         isMoving = false;
         break;
       }
-      else
+      else if (get(x +(int)(6*Math.cos(ang)),y +(int)(6*Math.sin(ang))) == d)
       {
         isMoving = true;
       }
