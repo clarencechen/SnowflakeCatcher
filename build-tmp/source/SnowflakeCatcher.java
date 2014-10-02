@@ -29,9 +29,10 @@ public void draw()
 {
   for(int i=0;i<mol.length;i++)
   {
+    mol[i].erase();
     mol[i].look();
     mol[i].collide();
-    mol[i].erase(); 
+    
     mol[i].move();
     mol[i].wrap();
     mol[i].show();
@@ -84,9 +85,9 @@ class Gas
   public void look()
   {
     int c = color(255,0,0);
-    for(int i = 0;i<8;i++)
+    for(double ang = angle-PI;ang<=angle+PI;ang+=PI/12)
     {
-      if(get(x +(int)(i*Math.cos(angle)),y +(int)(i*Math.sin(angle))) == c)
+      if(get(x +(int)(6*Math.cos(ang)),y +(int)(6*Math.sin(ang))) == c)
       {
         isMoving = false;
         break;
